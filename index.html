@@ -20,6 +20,11 @@
             });
         }
 
+        for (const image of images) {
+            image.src = image.src.replace(".jpg", ".webp");
+        }
+
+
 
         const imageContainer = document.getElementById("image-container");
 
@@ -40,10 +45,6 @@
         const sprite = document.createElement("img");
         sprite.src = "Conan-sprite.jpg";
         imageContainer.appendChild(sprite);
-
-        for (const image of images) {
-            image.src = image.src.replace(".jpg", ".webp");
-        }
 
         images.forEach((image) => {
             const imgElement = document.createElement("div");
