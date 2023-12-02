@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conan</title>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,16 +20,9 @@
 
         for (let i = 1; i <= 496; i++) {
             images.push({
-                src: `Conan (1)/Tap (${i}).jpg`,
-                alt: `Hình ảnh ${i}`,
+                src: `Conan (1)/Tap (${i}).webp`
             });
         }
-
-        for (const image of images) {
-            image.src = image.src.replace(".jpg", ".webp");
-        }
-
-
 
         const imageContainer = document.getElementById("image-container");
 
@@ -41,10 +39,6 @@
         }, {
             threshold: 0.5,
         });
-
-        const sprite = document.createElement("img");
-        sprite.src = "Conan-sprite.jpg";
-        imageContainer.appendChild(sprite);
 
         images.forEach((image) => {
             const imgElement = document.createElement("div");
