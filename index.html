@@ -78,6 +78,174 @@
             });
         }
 
+        for (let i = 1; i <= 499; i++) {
+            images.push({
+                src: `Conan (11)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 494; i++) {
+            images.push({
+                src: `Conan (12)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 495; i++) {
+            images.push({
+                src: `Conan (13)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 499; i++) {
+            images.push({
+                src: `Conan (14)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 518; i++) {
+            images.push({
+                src: `Conan (15)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 495; i++) {
+            images.push({
+                src: `Conan (16)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 507; i++) {
+            images.push({
+                src: `Conan (17)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 510; i++) {
+            images.push({
+                src: `Conan (18)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 498; i++) {
+            images.push({
+                src: `Conan (19)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 488; i++) {
+            images.push({
+                src: `Conan (20)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 497; i++) {
+            images.push({
+                src: `Conan (21)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 509; i++) {
+            images.push({
+                src: `Conan (22)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 496; i++) {
+            images.push({
+                src: `Conan (23)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 496; i++) {
+            images.push({
+                src: `Conan (24)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 509; i++) {
+            images.push({
+                src: `Conan (25)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 500; i++) {
+            images.push({
+                src: `Conan (26)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 492; i++) {
+            images.push({
+                src: `Conan (27)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 509; i++) {
+            images.push({
+                src: `Conan (28)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 493; i++) {
+            images.push({
+                src: `Conan (29)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 509; i++) {
+            images.push({
+                src: `Conan (30)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 506; i++) {
+            images.push({
+                src: `Conan (31)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 490; i++) {
+            images.push({
+                src: `Conan (32)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 500; i++) {
+            images.push({
+                src: `Conan (33)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 495; i++) {
+            images.push({
+                src: `Conan (34)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 503; i++) {
+            images.push({
+                src: `Conan (35)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 502; i++) {
+            images.push({
+                src: `Conan (36)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 498; i++) {
+            images.push({
+                src: `Conan (37)/Tap (${i}).webp`
+            });
+        }
+
+        for (let i = 1; i <= 344; i++) {
+            images.push({
+                src: `Conan (38)/Tap (${i}).webp`
+            });
+        }
+
         const imageContainer = document.getElementById("image-container");
 
         const observer = new IntersectionObserver((entries) => {
@@ -85,7 +253,6 @@
                 if (entry.isIntersecting) {
                     const image = document.createElement("img");
                     image.src = entry.target.dataset.src;
-                    image.alt = entry.target.dataset.alt;
                     imageContainer.appendChild(image);
                     observer.unobserve(entry.target);
                 }
@@ -97,7 +264,6 @@
         images.forEach((image) => {
             const imgElement = document.createElement("div");
             imgElement.dataset.src = image.src;
-            imgElement.dataset.alt = image.alt;
             observer.observe(imgElement);
             imageContainer.appendChild(imgElement);
         });
